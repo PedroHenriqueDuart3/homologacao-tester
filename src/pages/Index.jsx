@@ -56,7 +56,7 @@ const Index = () => {
 
   return (
     <>
-      <BackgroundMusic src="/public/audio/kiss.mp3" />
+      <BackgroundMusic src="/audio/kiss.mp3" />
 
       {/* Player Spotify estético fixo no canto inferior esquerdo */}
       <div style={{
