@@ -26,82 +26,6 @@ import foto9 from '@/assets/images/foto9.jpg'
 import video1 from '@/assets/video/video1.mp4'
 import video2 from '@/assets/video/video2.mp4'
 
-// const Index = () => {
-//   const [currentPage, setCurrentPage] = useState('home');
-
-//   const galleryItems = [
-//     { src: foto1, caption: ' ', type: 'image' },
-//     { src: foto2, caption: ' ', type: 'image' },
-//     { src: foto3, caption: ' ', type: 'image' },
-//     { src: foto4, caption: ' ', type: 'image' },
-//     { src: foto5, caption: ' ', type: 'image' },
-//     { src: foto6, caption: ' ', type: 'image' },
-//     { src: foto7, caption: ' ', type: 'image' },
-//     { src: foto8, caption: ' ', type: 'image' },
-
-//     // videos
-//     { src: video1, caption: ' ', type: 'video'},
-//     { src: video2, caption: ' ', type: 'video'}
-//   ];
-
-//   const navigateToContract = () => {
-//     setCurrentPage('contract');
-//     window.scrollTo({ top: 0, behavior: 'smooth' });
-//   };
-
-//   const navigateToHome = () => {
-//     setCurrentPage('home');
-//     window.scrollTo({ top: 0, behavior: 'smooth' });
-//   };
-
-//   if (currentPage === 'contract') {
-//     return <ContractPage onNavigateToHome={navigateToHome} />;
-//   }
-
-//   return (
-//     <main className="index-page">
-//       <>
-//       {/* Player Spotify fixo no canto inferior esquerdo */}
-//       <div style={{
-//         position: 'fixed',
-//         bottom: '20px',
-//         left: '20px',
-//         zIndex: 9999,
-//         width: '30%',
-//         borderRadius: '12px',
-//         height: '12%',
-//         boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)',
-//         overflow: 'hidden'
-//       }}>
-//         <iframe 
-//           data-testid="embed-iframe" 
-//           style={{ borderRadius: '12px' }} 
-//           src="https://open.spotify.com/embed/track/07q0QVgO56EorrSGHC48y3?utm_source=generator" 
-//           width="100%" 
-//           height="152"  
-//           allowFullScreen="true" 
-//         />
-//       </div>
-//       </>
-
-//       <BackgroundMusic src="/src/assets/audio/Kiss - I Was Made For Lovin' You - KissVEVO (youtube).mp3" />
-
-//       <ScrollProgress />
-//       <FallingPetals />
-
-//       <HeroSection />
-//       <DedicationSection />
-//       <CounterSection />
-//       <GallerySection items={galleryItems} />
-//       <ProposalSection onNavigateToContract={navigateToContract} />
-//       <Footer />
-//     </main>
-//   );
-// };
-
-// export default Index;
-
-
 const Index = () => {
   const [currentPage, setCurrentPage] = useState('home');
 
@@ -132,7 +56,7 @@ const Index = () => {
 
   return (
     <>
-      <BackgroundMusic src="/src/assets/audio/Kiss - I Was Made For Lovin' You - KissVEVO (youtube).mp3" />
+      <BackgroundMusic src="/public/audio/kiss.mp3" />
 
       {/* Player Spotify estético fixo no canto inferior esquerdo */}
       <div style={{
