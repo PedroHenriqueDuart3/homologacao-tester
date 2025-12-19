@@ -1,0 +1,278 @@
+.proposal-section {
+    padding: 6rem 0;
+    background: var(--background);
+    position: relative;
+    overflow: hidden;
+}
+
+@media (min-width: 768px) {
+    .proposal-section {
+        padding: 10rem 0;
+    }
+}
+
+.proposal-background {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.proposal-blob-1 {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 40rem;
+    height: 40rem;
+    border-radius: 50%;
+    background: hsl(var(--primary) / 0.05);
+    filter: blur(3rem);
+}
+
+.proposal-blob-2 {
+    position: absolute;
+    bottom: 25%;
+    right: 25%;
+    width: 40rem;
+    height: 40rem;
+    border-radius: 50%;
+    background: hsl(var(--wine) / 0.05);
+    filter: blur(3rem);
+}
+
+.proposal-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    position: relative;
+    z-index: 10;
+}
+
+@media (min-width: 768px) {
+    .proposal-container {
+        padding: 0 2rem;
+    }
+}
+
+.proposal-title {
+    font-family: var(--font-serif);
+    font-size: 1.875rem;
+    color: var(--wine);
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+    .proposal-title {
+        font-size: 2.25rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .proposal-title {
+        font-size: 3.75rem;
+    }
+}
+
+.proposal-content {
+    max-width: 48rem;
+    margin: 0 auto;
+}
+
+.proposal-text {
+    font-size: 1.125rem;
+    color: hsl(var(--foreground) / 0.9);
+    line-height: 1.75;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .proposal-text {
+        font-size: 1.25rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .proposal-text {
+        font-size: 1.5rem;
+    }
+}
+
+.proposal-card {
+    background: linear-gradient(to bottom right, hsl(var(--rose-light)), hsl(var(--lavender)));
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    text-align: center;
+    margin-bottom: 4rem;
+    border: 1px solid hsl(var(--primary) / 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+@media (min-width: 768px) {
+    .proposal-card {
+        padding: 3.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .proposal-card {
+        padding: 4rem;
+    }
+}
+
+.proposal-card-hearts {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.proposal-heart-icon {
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    color: var(--wine);
+    fill: currentColor;
+    margin-bottom: 2rem;
+}
+
+.proposal-card-text {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    color: var(--wine);
+    line-height: 1.75;
+    position: relative;
+    z-index: 10;
+}
+
+@media (min-width: 768px) {
+    .proposal-card-text {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .proposal-card-text {
+        font-size: 1.875rem;
+    }
+}
+
+.proposal-promises {
+    margin: 4rem 0;
+    padding: 3rem;
+    background: linear-gradient(135deg, hsl(var(--wine) / 0.05), hsl(var(--gold) / 0.05));
+    border-radius: 20px;
+    border: 2px solid hsl(var(--wine) / 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.proposal-promises-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: hsl(var(--wine));
+    text-align: center;
+    margin-bottom: 2.5rem;
+    text-shadow: 0 2px 10px hsl(var(--wine) / 0.2);
+}
+
+.proposal-promises-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.promise-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.promise-item:hover {
+    box-shadow: 0 8px 25px hsl(var(--wine) / 0.2);
+    transform: translateY(-2px);
+}
+
+.promise-heart {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: hsl(var(--wine));
+    fill: hsl(var(--wine));
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+}
+
+.promise-item p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: hsl(var(--wine) / 0.8);
+    margin: 0;
+}
+
+.proposal-button-wrapper {
+    text-align: center;
+}
+
+.proposal-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.125rem;
+    padding: 1.25rem 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+@media (min-width: 768px) {
+    .proposal-button {
+        font-size: 1.25rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .proposal-button {
+        font-size: 1.5rem;
+    }
+}
+
+.proposal-button-overlay {
+    position: absolute;
+    inset: 0;
+    background: hsl(var(--wine-foreground) / 0.2);
+    transform: translateX(-100%);
+}
+
+.proposal-button-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .proposal-promises {
+        padding: 2rem 1.5rem;
+        margin: 3rem 0;
+    }
+
+    .proposal-promises-title {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .promise-item {
+        padding: 1rem;
+    }
+
+    .promise-item p {
+        font-size: 1rem;
+    }
+}

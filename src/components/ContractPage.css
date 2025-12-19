@@ -1,0 +1,307 @@
+.contract-page {
+    min-height: 100vh;
+    background: var(--background);
+    padding: 2rem 1rem;
+}
+
+.contract-clause-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding-left: 1.25rem;
+    margin-top: 0.5rem;
+}
+
+.contract-clause-list-item {
+    color: hsl(var(--foreground) / 0.9);
+    line-height: 1.7;
+    position: relative;
+}
+
+.contract-clause-list-item::marker {
+    color: var(--wine);
+    font-weight: bold;
+}
+
+.contract-container {
+    max-width: 64rem;
+    margin: 0 auto;
+}
+
+.contract-back-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--wine);
+    transition: color 0.3s;
+    margin-bottom: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+
+.contract-back-button:hover {
+    color: hsl(var(--wine) / 0.8);
+}
+
+.contract-card {
+    background: var(--card);
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border: 1px solid hsl(var(--primary) / 0.2);
+    overflow: hidden;
+}
+
+.contract-header {
+    background: linear-gradient(to bottom right, hsl(var(--rose-light)), hsl(var(--lavender)));
+    padding: 2rem;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .contract-header {
+        padding: 3rem;
+    }
+}
+
+.contract-header-title {
+    font-family: var(--font-serif);
+    font-size: 1.875rem;
+    color: var(--wine);
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+    .contract-header-title {
+        font-size: 2.25rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .contract-header-title {
+        font-size: 3rem;
+    }
+}
+
+.contract-header-date {
+    color: hsl(var(--wine) / 0.7);
+}
+
+.contract-body {
+    padding: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .contract-body {
+        padding: 3rem;
+    }
+}
+
+.contract-intro {
+    color: hsl(var(--foreground) / 0.9);
+    line-height: 1.75;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.contract-clauses {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contract-clause {
+    padding: 0;
+}
+
+
+.contract-clause-title {
+    font-family: var(--font-serif);
+    font-size: 1.125rem;
+    color: var(--wine);
+    margin-bottom: 0.75rem;
+}
+
+@media (min-width: 768px) {
+    .contract-clause-title {
+        font-size: 1.25rem;
+    }
+}
+
+.contract-clause-text {
+    color: hsl(var(--foreground) / 0.9);
+    line-height: 1.75;
+}
+
+.contract-clause-text-special {
+    font-size: 1.25rem;
+    font-family: var(--font-serif);
+    color: var(--wine);
+    font-weight: 600;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.contract-clause-subtext {
+    color: hsl(var(--foreground) / 0.8);
+    line-height: 1.75;
+    margin-top: 0.75rem;
+}
+
+.contract-footer-note {
+    margin-top: 3rem;
+    padding: 1.5rem;
+    background: hsl(var(--muted) / 0.5);
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.contract-footer-text {
+    font-family: var(--font-serif);
+    font-size: 1.125rem;
+    color: var(--wine);
+    font-style: italic;
+}
+
+.contract-signature-section {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: linear-gradient(to bottom right, hsl(var(--rose-light) / 0.3), hsl(var(--lavender) / 0.3));
+    border-radius: 1.5rem;
+    border: 1px solid hsl(var(--primary) / 0.2);
+}
+
+.contract-signature-title {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: var(--wine);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.contract-signature-description {
+    color: var(--muted-foreground);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.contract-signature-input {
+    width: 100%;
+    max-width: 28rem;
+    margin: 0 auto;
+    display: block;
+    padding: 1rem 1.5rem;
+    border-radius: 0.75rem;
+    border: 2px solid hsl(var(--primary) / 0.3);
+    outline: none;
+    transition: all 0.3s;
+    text-align: center;
+    font-family: 'Tangerine', cursive;
+    font-size: 2rem;
+    font-weight: 700;
+    background: var(--background);
+}
+
+.contract-signature-input:focus {
+    border-color: var(--wine);
+    box-shadow: 0 0 0 4px hsl(var(--wine) / 0.1);
+}
+
+.contract-sign-button {
+    margin-top: 1.5rem;
+}
+
+.contract-sign-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.contract-signed-section {
+    text-align: center;
+}
+
+.contract-check-icon-wrapper {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: hsl(var(--wine) / 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.contract-check-icon {
+    width: 2rem;
+    height: 2rem;
+    color: var(--wine);
+}
+
+.contract-signed-title {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: var(--wine);
+    margin-bottom: 1rem;
+}
+
+.contract-signature-display {
+    background: hsl(var(--background) / 0.5);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    max-width: 28rem;
+    margin: 0 auto 1.5rem;
+}
+
+.contract-signature-name {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: var(--wine);
+    border-bottom: 2px solid hsl(var(--wine) / 0.3);
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.contract-signature-timestamp {
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
+}
+
+.contract-success-message {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    color: var(--wine);
+    margin-bottom: 2rem;
+}
+
+.contract-button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+}
+
+@media (min-width: 640px) {
+    .contract-button-group {
+        flex-direction: row;
+    }
+}
+
+.contract-secondary-button {
+    padding: 1rem 2rem;
+    border-radius: 9999px;
+    font-weight: 500;
+    border: 2px solid var(--wine);
+    color: var(--wine);
+    background: transparent;
+    transition: all 0.3s;
+    font-family: var(--font-serif);
+    cursor: pointer;
+}
+
+.contract-secondary-button:hover {
+    background: var(--wine);
+    color: var(--wine-foreground);
+}

@@ -1,0 +1,142 @@
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.hero-gradient-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, hsl(var(--rose-light) / 0.5), var(--background), var(--background));
+}
+
+.hero-radial-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, hsl(var(--primary) / 0.2), transparent, transparent);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.hero-title-wrapper {
+    margin-bottom: 2rem;
+}
+
+.hero-title {
+    font-family: var(--font-serif);
+    font-size: 2.25rem;
+    color: var(--wine);
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 640px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .hero-title {
+        font-size: 3.75rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-title {
+        font-size: 4.5rem;
+    }
+}
+
+.hero-image-wrapper {
+    animation: floating 4s ease-in-out infinite;
+}
+
+.hero-image {
+    margin: 0 auto;
+    width: 9rem;
+    height: 9rem;
+    object-fit: cover;
+    border-radius: 30%;
+    box-shadow: var(--shadow-glow);
+    border: 4px solid hsl(var(--rose-light));
+}
+
+@media (min-width: 640px) {
+    .hero-image {
+        width: 11rem;
+        height: 11rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .hero-image {
+        width: 14rem;
+        height: 14rem;
+    }
+}
+
+@keyframes floating {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.hero-scroll-button {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: hsl(var(--wine) / 0.6);
+    transition: color 0.3s;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.hero-scroll-button:hover {
+    color: var(--wine);
+}
+
+.hero-scroll-text {
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.hero-bottom-gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 12rem;
+    background: linear-gradient(to top, var(--background), hsl(var(--background) / 0.8), transparent);
+    z-index: 10;
+}
