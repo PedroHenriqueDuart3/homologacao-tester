@@ -21,6 +21,19 @@ import foto6 from '@/assets/images/foto6.jpeg'
 import foto7 from '@/assets/images/foto7.jpeg'
 import foto8 from '@/assets/images/foto8.jpeg'
 import foto9 from '@/assets/images/foto9.jpg'
+import foto10 from '@/assets/images/foto10.jpeg'
+import foto11 from '@/assets/images/foto11.jpeg'
+import foto12 from '@/assets/images/foto12.jpeg'
+import foto13 from '@/assets/images/foto13.jpeg'
+import foto14 from '@/assets/images/foto14.jpeg'
+import foto15 from '@/assets/images/foto15.jpeg'
+import foto16 from '@/assets/images/foto16.jpeg'
+import foto17 from '@/assets/images/foto17.jpeg'
+import foto18 from '@/assets/images/foto18.jpeg'
+import foto19 from '@/assets/images/foto19.jpeg'
+import foto20 from '@/assets/images/foto20.jpeg'
+import foto21 from '@/assets/images/foto21.jpeg'
+import foto22 from '@/assets/images/foto22.jpeg'
 
 // Import dos videos
 import video1 from '@/assets/video/video1.mp4'
@@ -38,10 +51,25 @@ const Index = () => {
     { src: foto6, caption: ' ', type: 'image' },
     { src: foto7, caption: ' ', type: 'image' },
     { src: foto8, caption: ' ', type: 'image' },
+    { src: foto10, caption: ' ', type: 'image' },
+    { src: foto11, caption: ' ', type: 'image' },
+    { src: foto12, caption: ' ', type: 'image' },
+    { src: foto13, caption: ' ', type: 'image' },
+    { src: foto14, caption: ' ', type: 'image' },
+    { src: foto15, caption: ' ', type: 'image' },
+    { src: foto16, caption: ' ', type: 'image' },
+    { src: foto17, caption: ' ', type: 'image' },
+    { src: foto18, caption: ' ', type: 'image' },
+    { src: foto19, caption: ' ', type: 'image' },
+    { src: foto20, caption: ' ', type: 'image' },
+    { src: foto21, caption: ' ', type: 'image' },
+    { src: foto22, caption: ' ', type: 'image' },
+
+    
 
     // videos
     { src: video1, caption: ' ', type: 'video'},
-    { src: video2, caption: ' ', type: 'video'}
+    { src: video2, caption: ' ', type: 'video'},
   ];
 
   const navigateToContract = () => {
