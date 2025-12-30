@@ -125,31 +125,20 @@
     margin-bottom: 0.75rem;
 }
 
+.contract-clause-title-special {
+    font-size: 0.7rem;
+    color: hsl(var(--foreground) / 0.25);
+    font-weight: 400;
+    opacity: 0.35;
+}
+
 @media (min-width: 768px) {
     .contract-clause-title {
         font-size: 1.25rem;
     }
 }
 
-.contract-clause-text {
-    color: hsl(var(--foreground) / 0.9);
-    line-height: 1.75;
-}
 
-.contract-clause-text-special {
-    font-size: 1.25rem;
-    font-family: var(--font-serif);
-    color: var(--wine);
-    font-weight: 600;
-    text-align: center;
-    margin: 1rem 0;
-}
-
-.contract-clause-subtext {
-    color: hsl(var(--foreground) / 0.8);
-    line-height: 1.75;
-    margin-top: 0.75rem;
-}
 
 .contract-footer-note {
     margin-top: 3rem;

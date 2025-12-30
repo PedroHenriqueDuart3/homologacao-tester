@@ -4,7 +4,6 @@ import { FadeInView, ScaleInView } from './AnimationComponents';
 import { ArrowLeft, Check, Download, Heart } from 'lucide-react';
 import jsPDF from 'jspdf';
 import './ContractPage.css';
-import { text, title } from 'framer-motion/client';
 
 export const ContractPage = ({ onNavigateToHome }) => {
     const [signature, setSignature] = useState('');
@@ -40,22 +39,22 @@ export const ContractPage = ({ onNavigateToHome }) => {
 
         const clauses = [
             { title: 'CLÁUSULA PRIMEIRA - Do Amor Incondicional', text: 'Nos comprometemos a se amar para todo o sempre com respeito, carinho, compreensão e dedicação mútua, em todos os momentos da vida, sejam eles de alegria ou dificuldade.' },
-        { title: 'CLÁUSULA SEGUNDA - Da Confiança e Comunicação', text: 'Nos comprometemos a confiar um no outro e a conversar sobre absolutamente tudo o que acontecer com qualquer um dos dois, mantendo sempre a transparência, honestidade e diálogo aberto como pilares fundamentais do nosso relacionamento, independentemente de assuntos.' },
-        { title: 'CLÁUSULA TERCEIRA - Da Proporção do Amor (Cláusula Especial)', text: 'Eu te amo 55% e você me ama 45%' },
-        { title: 'CLÁUSULA QUARTA - Do Companheirismo', text: 'Nos comprometemos a estar presentes um para o outro em todos os momentos, celebrando conquistas juntos e oferecendo apoio incondicional nos momentos difíceis, sendo sempre o porto seguro um do outro.' },
-        { title: 'CLÁUSULA QUINTA - Do Respeito Mútuo', text: 'Nos comprometemos a respeitar as individualidades, sonhos, opiniões e espaços um do outro, entendendo que o amor verdadeiro não aprisiona, mas sim liberta e fortalece.' },
-        { title: 'CLÁUSULA SEXTA - Das Pequenas Alegrias', text: 'Nos comprometemos a valorizar e celebrar as pequenas coisas do dia a dia, entendendo que o amor se constrói nos detalhes: um sorriso, um abraço, uma palavra carinhosa, um gesto de cuidado.' },
-        { title: 'CLÁUSULA SÉTIMA - Do Crescimento Conjunto', text: 'Nos comprometemos a crescer juntos, apoiando os sonhos e objetivos um do outro, construindo um futuro repleto de amor, cumplicidade e realizações compartilhadas.' },
-        { title: 'CLÁUSULA OITAVA - Da Fidelidade e Lealdade', text: 'Nos comprometemos a ser fiéis e leais um ao outro, não apenas no aspecto físico, mas também emocional, mantendo o relacionamento como prioridade e protegendo o amor que construíram juntos.' },
-        { title: 'CLÁUSULA NONA - Do Perdão e Compreensão', text: 'Nos comprometemos a praticar o perdão e a compreensão, entendendo que todos cometem erros e que o amor verdadeiro é capaz de superar qualquer obstáculo através do diálogo, da empatia e do desejo genuíno de fazer o relacionamento funcionar.' },
-        { title: 'CLÁUSULA DÉCIMA - Da Eternidade do Amor', text: 'Nos comprometemos a renovar este compromisso todos os dias, entendendo que o amor eterno é construído através de escolhas diárias de amar, cuidar e valorizar a pessoa amada, hoje e sempre.' },
-        { title: 'CLÁUSULA DÉCIMA PRIMEIRA - PROMESSAS',  list: [
-                                                                  'Que a gente vai se amar até quando a gente se odiar.',
-                                                                  'Nunca fugir, sempre vamos enfrentar tudo juntos! Somos um! Ninguém cai fora, não importa o que aconteça!',
-                                                                  'Vamos cuidar um do outro mesmo quando estivermos velhinhos e gagá.',
-                                                                  'NUNCA, EM HIPÓTESE ALGUMA, DESISTIR DE NÓS.'
-                                                                ]
-        }
+            { title: 'CLÁUSULA SEGUNDA - Da Confiança e Comunicação', text: 'Nos comprometemos a confiar um no outro e a conversar sobre absolutamente tudo o que acontecer com qualquer um dos dois, mantendo sempre a transparência, honestidade e diálogo aberto como pilares fundamentais do nosso relacionamento, independentemente de assuntos.' },
+            { title: 'CLÁUSULA TERCEIRA - Do Companheirismo', text: 'Nos comprometemos a estar presentes um para o outro em todos os momentos, celebrando conquistas juntos e oferecendo apoio incondicional nos momentos difíceis, sendo sempre o porto seguro um do outro.' },
+            { title: 'CLÁUSULA QUARTA - Do Respeito Mútuo', text: 'Nos comprometemos a respeitar as individualidades, sonhos, opiniões e espaços um do outro, entendendo que o amor verdadeiro não aprisiona, mas sim liberta e fortalece.' },
+            { title: 'CLÁUSULA QUINTA - Das Pequenas Alegrias', text: 'Nos comprometemos a valorizar e celebrar as pequenas coisas do dia a dia, entendendo que o amor se constrói nos detalhes: um sorriso, um abraço, uma palavra carinhosa, um gesto de cuidado.' },
+            { title: 'CLÁUSULA SEXTA - Do Crescimento Conjunto', text: 'Nos comprometemos a crescer juntos, apoiando os sonhos e objetivos um do outro, construindo um futuro repleto de amor, cumplicidade e realizações compartilhadas.' },
+            { title: 'CLÁUSULA SÉTIMA - Da Fidelidade e Lealdade', text: 'Nos comprometemos a ser fiéis e leais um ao outro, não apenas no aspecto físico, mas também emocional, mantendo o relacionamento como prioridade e protegendo o amor que construíram juntos.' },
+            { title: 'CLÁUSULA OITAVA - Do Perdão e Compreensão', text: 'Nos comprometemos a praticar o perdão e a compreensão, entendendo que todos cometem erros e que o amor verdadeiro é capaz de superar qualquer obstáculo através do diálogo, da empatia e do desejo genuíno de fazer o relacionamento funcionar.' },
+            { title: 'CLÁUSULA NONA - Da Eternidade do Amor', text: 'Nos comprometemos a renovar este compromisso todos os dias, entendendo que o amor eterno é construído através de escolhas diárias de amar, cuidar e valorizar a pessoa amada, hoje e sempre.' },
+            { title: 'CLÁUSULA DÉCIMA - PROMESSAS', list: [
+                'Que a gente vai se amar até quando a gente se odiar.',
+                'Nunca fugir, sempre vamos enfrentar tudo juntos! Somos um! Ninguém cai fora, não importa o que aconteça!',
+                'Vamos cuidar um do outro mesmo quando estivermos velhinhos e gagá.',
+                'NUNCA, EM HIPÓTESE ALGUMA, DESISTIR DE NÓS.',
+                'Jamais dormir brigados! Essa promessa é uma das mais importantes de todas!'
+            ]},
+            { title: 'CLÁUSULA DÉCIMA PRIMEIRA - Da Proporção do Amor (Cláusula Especial)', text: 'Eu te amo 55% e você me ama 45%', special: true }
         ];
 
         clauses.forEach((clause) => {
@@ -70,11 +69,23 @@ export const ContractPage = ({ onNavigateToHome }) => {
             doc.text(titleLines, margin, yPosition);
             yPosition += titleLines.length * 6 + 5;
 
-            doc.setFont('helvetica', 'normal');
-            doc.setFontSize(10);
-            const textLines = doc.splitTextToSize(clause.text, maxWidth);
-            doc.text(textLines, margin, yPosition);
-            yPosition += textLines.length * 5 + 8;
+            if (clause.list) {
+                doc.setFont('helvetica', 'normal');
+                doc.setFontSize(10);
+                clause.list.forEach((item, i) => {
+                    const itemText = `${i + 1}ª: ${item}`;
+                    const itemLines = doc.splitTextToSize(itemText, maxWidth - 5);
+                    doc.text(itemLines, margin + 5, yPosition);
+                    yPosition += itemLines.length * 5 + 3;
+                });
+                yPosition += 5;
+            } else {
+                doc.setFont('helvetica', 'normal');
+                doc.setFontSize(10);
+                const textLines = doc.splitTextToSize(clause.text, maxWidth);
+                doc.text(textLines, margin, yPosition);
+                yPosition += textLines.length * 5 + 8;
+            }
         });
 
         if (yPosition > 220) {
@@ -109,7 +120,7 @@ export const ContractPage = ({ onNavigateToHome }) => {
         const footerLines = doc.splitTextToSize(footer, maxWidth);
         doc.text(footerLines, pageWidth / 2, yPosition, { align: 'center' });
 
-        const fileName = `Comprovante_Namoro_${new Date().toLocaleDateString('pt-BR').replace(/\//g, '-')}.pdf`;
+        const fileName = `ComprovanteDoNossoNamoro_Dia${new Date().toLocaleDateString('pt-BR').replace(/\//g, '-')}.pdf`;
         doc.save(fileName);
         setIsGeneratingPDF(false);
     };
@@ -122,24 +133,23 @@ export const ContractPage = ({ onNavigateToHome }) => {
     };
 
     const contractClauses = [
-        { title: 'CLÁUSULA PRIMEIRA - Do Amor Incondicional', text: 'Nos comprometemos a se amar para todo o sempre com respeito, carinho, compreensão e dedicação mútua, em todos os momentos da vida, sejam eles de alegria ou dificuldade.' },
-        { title: 'CLÁUSULA SEGUNDA - Da Confiança e Comunicação', text: 'Nos comprometemos a confiar um no outro e a conversar sobre absolutamente tudo o que acontecer com qualquer um dos dois, mantendo sempre a transparência, honestidade e diálogo aberto como pilares fundamentais do nosso relacionamento, independentemente de assuntos.' },
-        { title: 'CLÁUSULA TERCEIRA - Da Proporção do Amor (Cláusula Especial)', text: 'Eu te amo 55% e você me ama 45%' },
-        { title: 'CLÁUSULA QUARTA - Do Companheirismo', text: 'Nos comprometemos a estar presentes um para o outro em todos os momentos, celebrando conquistas juntos e oferecendo apoio incondicional nos momentos difíceis, sendo sempre o porto seguro um do outro.' },
-        { title: 'CLÁUSULA QUINTA - Do Respeito Mútuo', text: 'Nos comprometemos a respeitar as individualidades, sonhos, opiniões e espaços um do outro, entendendo que o amor verdadeiro não aprisiona, mas sim liberta e fortalece.' },
-        { title: 'CLÁUSULA SEXTA - Das Pequenas Alegrias', text: 'Nos comprometemos a valorizar e celebrar as pequenas coisas do dia a dia, entendendo que o amor se constrói nos detalhes: um sorriso, um abraço, uma palavra carinhosa, um gesto de cuidado.' },
-        { title: 'CLÁUSULA SÉTIMA - Do Crescimento Conjunto', text: 'Nos comprometemos a crescer juntos, apoiando os sonhos e objetivos um do outro, construindo um futuro repleto de amor, cumplicidade e realizações compartilhadas.' },
-        { title: 'CLÁUSULA OITAVA - Da Fidelidade e Lealdade', text: 'Nos comprometemos a ser fiéis e leais um ao outro, não apenas no aspecto físico, mas também emocional, mantendo o relacionamento como prioridade e protegendo o amor que construíram juntos.' },
-        { title: 'CLÁUSULA NONA - Do Perdão e Compreensão', text: 'Nos comprometemos a praticar o perdão e a compreensão, entendendo que todos cometem erros e que o amor verdadeiro é capaz de superar qualquer obstáculo através do diálogo, da empatia e do desejo genuíno de fazer o relacionamento funcionar.' },
-        { title: 'CLÁUSULA DÉCIMA - Da Eternidade do Amor', text: 'Nos comprometemos a renovar este compromisso todos os dias, entendendo que o amor eterno é construído através de escolhas diárias de amar, cuidar e valorizar a pessoa amada, hoje e sempre.' },
-        { title: 'CLÁUSULA DÉCIMA PRIMEIRA - PROMESSAS',  list: [
-                                                                  'Que a gente vai se amar até quando a gente se odiar.',
-                                                                  'Nunca fugir, sempre vamos enfrentar tudo juntos! Somos um! Ninguém cai fora, não importa o que aconteça!',
-                                                                  'Vamos cuidar um do outro mesmo quando estivermos velhinhos e gagá.',
-                                                                  'NUNCA, EM HIPÓTESE ALGUMA, DESISTIR DE NÓS.'
-                                                                ]
-        }
-
+        { id: 'clause-1', title: 'CLÁUSULA PRIMEIRA - Do Amor Incondicional', text: 'Nos comprometemos a se amar para todo o sempre com respeito, carinho, compreensão e dedicação mútua, em todos os momentos da vida, sejam eles de alegria ou dificuldade.' },
+        { id: 'clause-2', title: 'CLÁUSULA SEGUNDA - Da Confiança e Comunicação', text: 'Nos comprometemos a confiar um no outro e a conversar sobre absolutamente tudo o que acontecer com qualquer um dos dois, mantendo sempre a transparência, honestidade e diálogo aberto como pilares fundamentais do nosso relacionamento, independentemente de assuntos.' },
+        { id: 'clause-3', title: 'CLÁUSULA TERCEIRA - Do Companheirismo', text: 'Nos comprometemos a estar presentes um para o outro em todos os momentos, celebrando conquistas juntos e oferecendo apoio incondicional nos momentos difíceis, sendo sempre o porto seguro um do outro.' },
+        { id: 'clause-4', title: 'CLÁUSULA QUARTA - Do Respeito Mútuo', text: 'Nos comprometemos a respeitar as individualidades, sonhos, opiniões e espaços um do outro, entendendo que o amor verdadeiro não aprisiona, mas sim liberta e fortalece.' },
+        { id: 'clause-5', title: 'CLÁUSULA QUINTA - Das Pequenas Alegrias', text: 'Nos comprometemos a valorizar e celebrar as pequenas coisas do dia a dia, entendendo que o amor se constrói nos detalhes: um sorriso, um abraço, uma palavra carinhosa, um gesto de cuidado.' },
+        { id: 'clause-6', title: 'CLÁUSULA SEXTA - Do Crescimento Conjunto', text: 'Nos comprometemos a crescer juntos, apoiando os sonhos e objetivos um do outro, construindo um futuro repleto de amor, cumplicidade e realizações compartilhadas.' },
+        { id: 'clause-7', title: 'CLÁUSULA SÉTIMA - Da Fidelidade e Lealdade', text: 'Nos comprometemos a ser fiéis e leais um ao outro, não apenas no aspecto físico, mas também emocional, mantendo o relacionamento como prioridade e protegendo o amor que construíram juntos.' },
+        { id: 'clause-8', title: 'CLÁUSULA OITAVA - Do Perdão e Compreensão', text: 'Nos comprometemos a praticar o perdão e a compreensão, entendendo que todos cometem erros e que o amor verdadeiro é capaz de superar qualquer obstáculo através do diálogo, da empatia e do desejo genuíno de fazer o relacionamento funcionar.' },
+        { id: 'clause-9', title: 'CLÁUSULA NONA - Da Eternidade do Amor', text: 'Nos comprometemos a renovar este compromisso todos os dias, entendendo que o amor eterno é construído através de escolhas diárias de amar, cuidar e valorizar a pessoa amada, hoje e sempre.' },
+        { id: 'clause-10', title: 'CLÁUSULA DÉCIMA - PROMESSAS', list: [
+            'Que a gente vai se amar até quando a gente se odiar.',
+            'Nunca fugir, sempre vamos enfrentar tudo juntos! Somos um! Ninguém cai fora, não importa o que aconteça!',
+            'Vamos cuidar um do outro mesmo quando estivermos velhinhos e gagá.',
+            'NUNCA, EM HIPÓTESE ALGUMA, DESISTIR DE NÓS.',
+            'Jamais dormir brigados! Essa promessa é uma das mais importantes de todas!'
+        ]},
+        { id: 'clause-special', title: 'CLÁUSULA DÉCIMA PRIMEIRA - Da Proporção do Amor (Cláusula Especial)', text: 'Eu te amo 55% e você me ama 45%', special: true }
     ];
 
     return (
@@ -170,26 +180,42 @@ export const ContractPage = ({ onNavigateToHome }) => {
                     <div className="contract-body">
                         <div className="contract-clauses">
                             {contractClauses.map((clause, index) => (
-                                <FadeInView key={index} delay={0.1 + index * 0.05}>
-                                    <div className={clause.special ? 'contract-clause contract-clause-special' : 'contract-clause'}>
-                                        <h2 className="contract-clause-title">
+                                <FadeInView key={clause.id} delay={0.1 + index * 0.05}>
+                                    <div 
+                                        className="contract-clause"
+                                        style={clause.special ? { opacity: 0.25 } : {}}
+                                    >
+                                        <h2 
+                                            className="contract-clause-title"
+                                            style={clause.special ? { 
+                                                fontSize: '0.7rem', 
+                                                fontWeight: 400,
+                                                opacity: 0
+                                            } : {}}
+                                        >
                                             {clause.title}
                                         </h2>
                                     </div>
                                     {clause.list ? (
-                                                     <ul className="contract-clause-list">
-                                                       {clause.list.map((item, i) => (
-                                                         <li key={i} className="contract-clause-list-item">
-                                                           <strong>{i + 1}ª:</strong> {item}
-                                                         </li>
-                                                       ))}
-                                                     </ul>
-                                                   ) : (
-                                                     <p className="contract-clause-text">
-                                                       {clause.text}
-                                                     </p>
-                                                   )}
-
+                                        <ul className="contract-clause-list">
+                                            {clause.list.map((item, i) => (
+                                                <li key={i} className="contract-clause-list-item">
+                                                    <strong>{i + 1}ª:</strong> {item}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    ) : (
+                                        <p 
+                                            className="contract-clause-text"
+                                            style={clause.special ? { 
+                                                fontSize: '0.65rem', 
+                                                fontStyle: 'italic',
+                                                opacity: 0
+                                            } : {}}
+                                        >
+                                            {clause.text}
+                                        </p>
+                                    )}
                                 </FadeInView>
                             ))}
                         </div>
